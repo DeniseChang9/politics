@@ -1,9 +1,6 @@
 ---
 title: "My title"
-subtitle: "My subtitle if needed"
-author: 
-  - First author
-  - Another author
+author: "Denise Chang"
 thanks: "Code and data are available at: LINK."
 date: today
 date-format: long
@@ -97,8 +94,8 @@ Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta
 y_i|\pi_i &\sim \mbox{Bern}(\pi_i) \\
 \mbox{logit}(\pi_i) &= \alpha + \beta_1 \times \mbox{gender}_i + \beta_2 \times \mbox{education}_i\\
 \alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta_1 &\sim \mbox{Normal}(0, 2.5) \\
-\beta_2 &\sim \mbox{Normal}(0, 2.5)
+\beta_1 &\sim \mbox{Normal}(0, 5.02) \\
+\beta_2 &\sim \mbox{Normal}(0, 6.34)
 \end{align}
 
 We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
@@ -142,9 +139,6 @@ modelsummary::modelsummary(
   fmt = 2
 )
 ```
-
-
-
 
 # Discussion
 
@@ -211,8 +205,6 @@ plot(first_model, "trace")
 
 plot(first_model, "rhat")
 ```
-
-
 
 \newpage
 
